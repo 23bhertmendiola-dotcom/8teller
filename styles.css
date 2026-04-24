@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('bgg.jfif') no-repeat center center/cover;
+}
+/* The container centers all content on the page */
+.container {
+  text-align: center;
+  margin-top: 120px; /* pushes content below header */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);    
+  z-index: 1000;
+}
+  /* The title and logo are centered within the header */
+.title {
+  margin: 0;
+  font-size: 40px;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.title {
+  text-shadow: 0 0 10px gold, 0 0 20px gold;
+}
+.logo {
+  width: 80px;  
+  height: auto;
+}
+/* The main content is centered on the page, with the 8-ball and chat box */
+.eight-ball {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px; /* centers horizontally */
+  border-radius: 50%;
+  border: 10px solid #4c2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: radial-gradient(circle, #1a1a1a, #000);
+  box-shadow: 0 0 20px cyan, inset 0 0 30px blue;
+  background: url('stars.gif') center/cover;
+}
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* The inner circle contains the answer text and the spinning layer */
+.inner-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle p {
+  color: #ffffff;
+  font-style: italic;
+  font-weight: bold;
+}
+.inner-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: rgb(59, 55, 55);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spin-layer {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: url('eightball.jfif') no-repeat center/contain;
+  animation: spin 5s linear infinite;
+}
+#answer{
+ font-family: 'Orbitron', sans-serif;
+  position: relative;
+  white-space: nowrap; 
+  width: min-content;
+
+  container-type: inline-size;
+}
+#answer > p {
+  font-size: 20cqi; 
+}
+#answer {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+#answer.show {
+  opacity: 1;
+}
+
+.chat-box {
+  display: flex;
+  gap: 10px;
+}
+
+#questionInput {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+#askButton {
+  padding: 10px 15px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#askButton:hover {
+  background-color: #555;
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}

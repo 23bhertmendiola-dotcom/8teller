@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 8-Teller Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+  <h1 class="title">
+    <img src="infinity.png" class="logo">TELLER
+  </h1>
+</div>
+  <div class="container">
+    <div class="eight-ball" id="eightBall">
+      <div class="inner-circle">
+        <img src="eightball.jfif" class="spin-layer">
+        <p id="answer"></p>
+      </div>
+    </div>
+    <div class="chat-box">
+      <input type="text" id="questionInput" placeholder="Ask the 8-Teller a question..." autofocus>
+      <button id="askButton">Ask</button>
+    </div>
+  </div>
+<script src="script.js" defer></script>
+</body>
+</html>
